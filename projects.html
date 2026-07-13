@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puru Jain - Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">PJ</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="projects-header">
+    <div class="container">
+      <h1>My Projects</h1>
+      <p>Distributed systems, ML systems research, security, and robotics work from research labs, teams, and personal initiatives</p>
+    </div>
+  </header>
+
+  <!-- Projects Container -->
+  <div class="container projects-container">
+
+    <!-- Category Filters -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-th-large"></i> All
+      </button>
+      <button class="filter-btn" data-filter="systems">
+        <i class="fas fa-server"></i> Systems
+      </button>
+      <button class="filter-btn" data-filter="research">
+        <i class="fas fa-flask"></i> Research
+      </button>
+      <button class="filter-btn" data-filter="security">
+        <i class="fas fa-shield-alt"></i> Security
+      </button>
+    </div>
+
+    <!-- Featured Project: KickBack -->
+    <div class="featured-project fade-in-up" data-category="systems">
+      <span class="featured-badge"><i class="fas fa-star"></i> Featured Project</span>
+      <div class="featured-content">
+        <div class="featured-info">
+          <h2>KickBack: Distributed Social Platform</h2>
+          <p class="featured-subtitle">Founder &amp; Distributed Systems Lead. A social platform backed by 12 bounded Go microservices with decoupled REST/gRPC contracts, geospatial + vector recommendations, and a cross-platform React Native client.</p>
+
+          <div class="project-skills">
+            <span class="skill-tag">Go</span>
+            <span class="skill-tag">Go-Chi</span>
+            <span class="skill-tag">gRPC</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">PostGIS / H3</span>
+            <span class="skill-tag">FAISS / pgvector</span>
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">TypeScript</span>
+          </div>
+
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-project-diagram"></i>
+              <div>
+                <strong>12 Microservices</strong>
+                <span>Independently deployable, versioned boundaries</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Geo + Vector Search</strong>
+                <span>PostGIS, Geohash, H3, FAISS, pgvector</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-lock"></i>
+              <div>
+                <strong>Privacy by Design</strong>
+                <span>Block/report semantics on every read path</span>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Architected the backend as 12 bounded microservices (Auth, Social Graph, Feed, Plans, Notifications, and more) in Go using Go-Chi, with decoupled REST/gRPC contracts for independent deployability and versioned service boundaries. Designed relational data models in PostgreSQL backing the friend graph and plan lifecycle, enforcing cross-cutting privacy constraints and block/report semantics on every read path.
+          </p>
+          <p>
+            Integrated geospatial indexing (PostGIS, Geohash, H3) and vector similarity search (FAISS, pgvector) to power low-latency location- and interest-based recommendation pipelines, and built a cross-platform React Native/TypeScript client with OAuth (Google/Apple), JWT refresh-token rotation, and device-scoped push notifications. Led a cross-functional engineering, design, and growth team through agile sprints, code review, and release cycles.
+          </p>
+        </div>
+        <div class="featured-images">
+          <div class="featured-placeholder">
+            <i class="fas fa-project-diagram"></i>
+            <span>12 Go microservices &middot; REST + gRPC &middot; PostgreSQL &middot; H3 &middot; pgvector</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <h2 class="section-divider"><span>All Projects</span></h2>
+
+    <div class="projects-grid">
+
+      <!-- Neuromorphic SNN Research -->
+      <div class="project-card fade-in-up" data-category="research">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-brain"></i> ML Systems</span>
+          <span class="award-badge"><i class="fas fa-university"></i> UC San Diego</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Neuromorphic Computing (HiAER-Spike)</h3>
+          <div class="project-skills">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">SpikingJelly</span>
+            <span class="skill-tag">SLURM</span>
+            <span class="skill-tag">Ray Tune</span>
+            <span class="skill-tag">Quantization</span>
+          </div>
+
+          <p class="project-description">
+            Memory-efficient training of Spiking Neural Networks and hardware-constrained ANN-to-SNN conversion for deployment to a neuromorphic accelerator fabric.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-bolt"></i> Training</h4>
+              <ul>
+                <li>Surrogate-gradient descent on DVS Gesture event streams</li>
+                <li>ANN-to-SNN conversion &amp; compression for CIFAR-10</li>
+                <li>Learned params folded into hardware thresholds</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-server"></i> Scale &amp; Validation</h4>
+              <ul>
+                <li>Distributed HPO across GPU clusters (SLURM + Ray Tune)</li>
+                <li>Accuracy/efficiency frontiers under fixed param budgets</li>
+                <li>Bitstream deployment via Neuroscience Gateway (NSG)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ethical Hacking CTFs -->
+      <div class="project-card fade-in-up" data-category="security">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-shield-alt"></i> Security</span>
+          <span class="award-badge"><i class="fas fa-flag"></i> Team Co-Captain</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Ethical Hacking CTFs: Binary RE &amp; Exploit Dev</h3>
+          <div class="project-skills">
+            <span class="skill-tag">Binary RE</span>
+            <span class="skill-tag">Web Security</span>
+            <span class="skill-tag">angr</span>
+            <span class="skill-tag">LLVM Sanitizers</span>
+            <span class="skill-tag">AFL++</span>
+          </div>
+
+          <p class="project-description">
+            Competitive capture-the-flag across binary reverse engineering, web security, and exploit development, co-captaining the team.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-search"></i> Reverse Engineering</h4>
+              <ul>
+                <li>Reverse-engineered 100+ challenge binaries &amp; codebases</li>
+                <li>Audited control flow &amp; trust boundaries with symbolic execution</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-bug"></i> Exploitation</h4>
+              <ul>
+                <li>150+ vulns: XSS, SQLi, CSRF, SSRF, memory-safety</li>
+                <li>Chained 2-4 vulns in complex challenges</li>
+                <li>50+ proof-of-concept exploits &amp; remediation tests</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RoboSub AUV -->
+      <div class="project-card fade-in-up" data-category="systems">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-robot"></i> Robotics</span>
+          <span class="award-badge"><i class="fas fa-water"></i> Founder</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Autonomous Underwater Vehicle (RoboSub)</h3>
+          <div class="project-skills">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">ROS</span>
+            <span class="skill-tag">PyMavLink</span>
+            <span class="skill-tag">Edge Compute</span>
+          </div>
+
+          <p class="project-description">
+            Founder and Software &amp; Mechanical Lead for an autonomous underwater vehicle with a real-time perception and telemetry stack on embedded edge compute.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-eye"></i> Perception</h4>
+              <ul>
+                <li>C++/OpenCV pipeline: HSV thresholding, morphological ops, contour filtering</li>
+                <li>Underwater target detection at a sustained 15 FPS</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-satellite-dish"></i> Integration</h4>
+              <ul>
+                <li>ROS + PyMavLink telemetry fusion at 15 Hz</li>
+                <li>rosbag logging for replay-driven root-cause analysis</li>
+                <li>20-page design history file across 13+ failure modes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ultrasound Beamforming -->
+      <div class="project-card fade-in-up" data-category="research">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-wave-square"></i> Research</span>
+          <span class="award-badge"><i class="fas fa-university"></i> Georgia Tech BME</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Ultrasound Phase-Conjugation Beamforming</h3>
+          <div class="project-skills">
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Hilbert Transform</span>
+            <span class="skill-tag">Verasonics</span>
+            <span class="skill-tag">Phased Arrays</span>
+            <span class="skill-tag">CAD</span>
+          </div>
+
+          <p class="project-description">
+            Phase-conjugation beamforming to correct wavefront aberration through organic structures for intercostal ultrasound access.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-bullseye"></i> Results</h4>
+              <ul>
+                <li>6-15 dB focal gain</li>
+                <li>30-70% sidelobe suppression</li>
+                <li>1-5 mm focal-localization improvement under 30-60% aperture blockage</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-drafting-compass"></i> Method</h4>
+              <ul>
+                <li>Complex-conjugate TX-element Green's-function weighting</li>
+                <li>Curvilinear phased-array geometry modeled in CAD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HyTech Racing PCB -->
+      <div class="project-card fade-in-up" data-category="systems">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-car"></i> Hardware &amp; PCB</span>
+          <span class="award-badge"><i class="fas fa-bolt"></i> HyTech Racing</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Low-Voltage Monitoring &amp; Regulation PCBs</h3>
+          <div class="project-skills">
+            <span class="skill-tag">Altium</span>
+            <span class="skill-tag">PCB Design</span>
+            <span class="skill-tag">AC/DC Analysis</span>
+            <span class="skill-tag">Datasheets</span>
+          </div>
+
+          <p class="project-description">
+            Racecar monitoring and regulation PCBs for Georgia Tech's HyTech Racing team, designed as a Low-Voltage Electrical Engineer.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-drafting-compass"></i> Design</h4>
+              <ul>
+                <li>Monitoring &amp; regulation boards in Altium</li>
+                <li>AC/DC circuit analysis for reliable low-voltage subsystems</li>
+                <li>Component selection from datasheet interpretation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UCLA Gene Annotation -->
+      <div class="project-card fade-in-up" data-category="research">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-dna"></i> Research</span>
+          <span class="award-badge"><i class="fas fa-university"></i> UCLA MCDB</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Genome Annotation &amp; Algorithm Correction</h3>
+          <div class="project-skills">
+            <span class="skill-tag">GENSAS</span>
+            <span class="skill-tag">BLASTP</span>
+            <span class="skill-tag">Bioinformatics</span>
+          </div>
+
+          <p class="project-description">
+            Research intern in UCLA's Department of Molecular, Cell, and Developmental Biology, annotating gene functions and hardening the annotation pipeline.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-code"></i> Contributions</h4>
+              <ul>
+                <li>Annotated gene functions with GENSAS and BLASTP</li>
+                <li>Corrected gene-identification algorithm errors</li>
+                <li>Improved annotation accuracy by 3%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Puru Jain. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Project filtering functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card, .featured-project');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Update active button
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.dataset.filter;
+
+          projectCards.forEach(card => {
+            if (filter === 'all') {
+              card.style.display = '';
+              card.style.animation = 'fadeInUp 0.5s ease-out forwards';
+            } else {
+              const categories = card.dataset.category || '';
+              if (categories.includes(filter)) {
+                card.style.display = '';
+                card.style.animation = 'fadeInUp 0.5s ease-out forwards';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

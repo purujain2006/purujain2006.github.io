@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puru Jain - Computer Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">PJ</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="assets/avatar.svg" alt="Puru Jain" class="hero-image">
+      <h1>Puru Jain</h1>
+      <p class="tagline"><span class="typed-text"></span><span class="typed-cursor">|</span></p>
+      <div class="hero-links">
+        <a href="mailto:pjain397@gatech.edu" class="hero-link" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/puru-jain-6693462bb" class="hero-link" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/purujain2006" class="hero-link" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Skills Combined Section -->
+  <section class="about-skills-section">
+    <div class="container">
+      <h2 class="section-title">About Me & Skills</h2>
+      <p class="section-subtitle">Systems, from silicon to distributed backends</p>
+
+      <div class="about-skills-wrapper">
+        <div class="about-content fade-in-up">
+          <h3>About Me</h3>
+          <p class="about-text">
+            I'm a Computer Engineering student at the Georgia Institute of Technology (GPA 3.90/4.00, expected May 2028) on the Distributed Systems and Software Design &amp; Architecture thread. I work across the stack: distributed backends, ML training infrastructure, embedded firmware, PCBs, and the security of the software that runs on top.
+          </p>
+
+          <p class="about-text">
+            As <strong>Founder & Distributed Systems Lead of KickBack</strong>, a social platform, I architected the backend as 12 bounded microservices (Auth, Social Graph, Feed, Plans, Notifications, and more) in Go with decoupled REST/gRPC contracts. I designed the PostgreSQL data models behind the friend graph and plan lifecycle, enforcing privacy and block/report semantics on every read path, and integrated geospatial indexing (PostGIS, Geohash, H3) with vector similarity search (FAISS, pgvector) to power low-latency recommendations. The client is a cross-platform React Native/TypeScript app with OAuth and JWT refresh-token rotation.
+          </p>
+
+          <p class="about-text">
+            As an <strong>ML Systems Researcher</strong> on the HiAER-Spike neuromorphic computing project (UC San Diego), I lead memory-efficient training of Spiking Neural Networks in PyTorch/SpikingJelly using surrogate-gradient descent, and engineer hardware-constrained ANN-to-SNN conversion and compression pipelines that fold learned parameters into hardware thresholds. I orchestrate distributed hyperparameter search across GPU clusters with SLURM and Ray Tune, and validate simulator correctness against real neuromorphic fabric deployed via the Neuroscience Gateway.
+          </p>
+
+          <p class="about-text">
+            In <strong>ultrasound research</strong> at Georgia Tech's Coulter Department of Biomedical Engineering, I implemented phase-conjugation beamforming in MATLAB using Hilbert transforms and complex-conjugate Green's-function weighting. It produced 6-15 dB of focal gain and 30-70% sidelobe suppression under aperture blockage. I also design low-voltage monitoring PCBs in Altium for HyTech Racing.
+          </p>
+
+          <p class="about-text">
+            Alongside all of this, I'm a <strong>competitive security player</strong>: as a CTF team co-captain I've reverse-engineered 100+ binaries, found and exploited 150+ vulnerabilities, and written 50+ proof-of-concept exploits and remediation tests. I'm drawn to problems where correctness, performance, and adversarial robustness all matter at once.
+          </p>
+        </div>
+
+        <div class="skills-content fade-in-up" style="animation-delay: 0.1s;">
+          <h3>Technical Skills</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <h4><i class="fas fa-code"></i> Languages</h4>
+              <p>C++, Python, Go, TypeScript, JavaScript, Java, SQL, MATLAB, Bash, Rust</p>
+            </div>
+
+            <div class="skill-item">
+              <h4><i class="fas fa-server"></i> Backend &amp; Distributed Systems</h4>
+              <p>PostgreSQL, PostGIS, Apache Kafka, RocksDB, gRPC, REST, Debezium, Go-Chi, FAISS, pgvector, Docker, Git, React Native</p>
+            </div>
+
+            <div class="skill-item">
+              <h4><i class="fas fa-brain"></i> ML Systems</h4>
+              <p>PyTorch, CUDA, Triton, SpikingJelly, Ray Tune, SLURM, DDP/FSDP, vLLM, TensorRT-LLM, quantization (SmoothQuant/GPTQ/AWQ)</p>
+            </div>
+
+            <div class="skill-item">
+              <h4><i class="fas fa-shield-alt"></i> Security &amp; Systems</h4>
+              <p>Binary reverse engineering, exploit development, Linux hardening, AFL++, ASAN/UBSAN, angr, symbolic execution</p>
+            </div>
+
+            <div class="skill-item">
+              <h4><i class="fas fa-microchip"></i> Robotics &amp; Hardware</h4>
+              <p>ROS, PyMavLink, OpenCV, Altium, SOLIDWORKS, PCB design, Verasonics phased arrays</p>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <h3 style="margin-top: 2rem;">Tech Stack</h3>
+          <div class="tech-stack-grid">
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+              <span>C++</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go">
+              <span>Go</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+              <span>TypeScript</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" alt="Rust">
+              <span>Rust</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+              <span>Java</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+              <span>PostgreSQL</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Apache Kafka">
+              <span>Kafka</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg" alt="gRPC">
+              <span>gRPC</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+              <span>Docker</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch">
+              <span>PyTorch</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native">
+              <span>React Native</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+              <span>Linux</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+              <span>Git</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV">
+              <span>OpenCV</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB">
+              <span>MATLAB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Puru Jain. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+                                                                                                                                                                                                                                        
