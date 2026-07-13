@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Puru Jain monogram">
+  <defs>
+    <linearGradient id="pjGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="pjRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="200" fill="url(#pjGrad)"/>
+  <circle cx="200" cy="200" r="182" fill="none" stroke="url(#pjRing)" stroke-width="6" opacity="0.55"/>
+  <text x="200" y="200" text-anchor="middle" dominant-baseline="central"
+        font-family="Inter, 'Segoe UI', sans-serif" font-size="180" font-weight="800"
+        fill="#FFFFFF" letter-spacing="-6">PJ</text>
+</svg>
